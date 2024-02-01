@@ -15,45 +15,58 @@ window.onload=function()
 
     }
 }
+
+function score(id){
+    if(id==="both"){
+        console.log("both")
+        ysc++;
+        osc++;
+        document.getElementById("your_score").style.color = "green";
+        document.getElementById("opponents_score").style.color = "green";
+        
+        document.getElementById("opp_choice").style.background = "green";
+        document.getElementById("your_choice").style.background = "green";
+    
+    }   
+
+    else{
+        if(id==="your_score"){
+            ysc++;
+            document.getElementById("your_score").style.color = "green";
+            document.getElementById("opponents_score").style.color = "white";
+        
+            document.getElementById("your_choice").style.background = "green";
+            document.getElementById("opp_choice").style.background = "grey";
+        }
+        else if("opponents_score"){
+            osc++;
+            document.getElementById("opponents_score").style.color = "green";
+            document.getElementById("your_score").style.color = "white";
+
+            document.getElementById("opp_choice").style.background = "green";
+            document.getElementById("your_choice").style.background = "grey";
+        }
+    }
+}
+
 function selectChoice()
 {
     you=this.id;
     document.getElementById("your_choice").src=you + ".png";
     opp=choices[Math.floor(Math.random() * 3)];
     document.getElementById("opp_choice").src=opp + ".png";
-    if(you==opp)
-    {
-        ysc+=1;
-        osc+=1
 
-    }
-    else
-    {
-        if(you=="r" && opp=="s")
-        {
-            ysc++;
-        }
-        else if(you=="r" && opp=="p")
-        {
-            osc++;
-        }
-        else if(you=="p" && opp=="r")
-        {
-            ysc++;
-        }
-        else if(you=="p" && opp=="s")
-        {
-            osc++;
-        }
-        else if(you=="s" && opp=="p")
-        {
-            ysc++;
-        }
-        else if(you=="s" && opp=="r")
-        {
-            osc++;
+    if (you===opp) {
+        score("both");
+    } 
+    else {
+        if ((you === "r" && opp === "s") || (you === "p" && opp === "r") || (you === "s" && opp === "p")) {
+            score("your_score");
+        } else {
+            score("opponents_score");
         }
     }
-    document.getElementById("your_score").innerHTML=ysc;
-    document.getElementById("opponent's_score").innerHTML=osc;
+
+    document.getElementById("your_score").innerHTML= "You: " + ysc;
+    document.getElementById("opponents_score").innerHTML= "Comp: " + osc;
 }

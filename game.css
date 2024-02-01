@@ -6,17 +6,15 @@ body{
 }
 #opp_choice
 {
-    width: 250px;
-    height: 250px;
-    background-color: rgb(68, 65, 191);
-    margin-top: 10px;
-    
+    width: 180px;
+    height: 180px;
+    background-color: grey;    
 }
 #your_choice
 {
-    width: 250px;
-    height: 250px;
-    background-color:rgb(131, 10, 16);
+    width: 180px;
+    height: 180px;
+    background-color:grey;
     margin-top: 10px;
 }
 #choices
@@ -32,4 +30,8 @@ body{
 {
     width: 80px;
     height: 80px;
+}
+#choices img:hover{
+    cursor: pointer;
+    background-color: tan;
 }
