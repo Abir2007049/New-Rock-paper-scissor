@@ -69,4 +69,43 @@ function selectChoice()
 
     document.getElementById("your_score").innerHTML= "You: " + ysc;
     document.getElementById("opponents_score").innerHTML= "Comp: " + osc;
+    
+    if(ysc>=5 || osc>=5){
+        displayWinner();
+    }
+}
+
+
+// result display
+function displayWinner() {
+    var res_message = "";
+    
+    if(ysc===osc) res_message = "Match Draw!😐";
+    else{
+        res_message = ysc > osc ? "You Win!😀" : "You Lose!😪";
+    }
+    res_message+= ("<br>You "+ysc+" : "+osc+" Com");
+    document.getElementById("res_message").innerHTML = res_message;
+
+    var result = document.getElementById("result");
+    result.style.display = "block";
+}
+
+function closePopUp() {
+    var result = document.getElementById("result");
+    result.style.display = "none";
+    resetGame();
+}
+function resetGame(){
+    ysc = 0;
+    osc = 0;
+
+    document.getElementById("your_score").innerHTML = "You: 0";
+    document.getElementById("opponents_score").innerHTML = "Comp: 0";
+    
+    document.getElementById("opp_choice").style.background = "grey";
+    document.getElementById("your_choice").style.background = "grey";
+
+    var result = document.getElementById("result");
+    result.style.display = "none";
 }

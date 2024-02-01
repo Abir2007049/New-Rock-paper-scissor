@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stone paper scissor</title>
+    <title>Rock paper scissor</title>
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
@@ -18,6 +18,15 @@
         
     </div>
  
+<!-- game result -->
+<div id="result">
+    <div class="result-content">
+        <span class="close" onclick="closePopUp()">&times;</span>
+        <p id="res_message"></p>
+        <button onclick="resetGame()">Play Again</button>
+    </div>
+</div>
+
     <script src="game.js"></script>
 </body>
 </html>
