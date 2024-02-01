@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#opp_choice
+{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(68, 65, 191);
+    margin-top: 10px;
+    
+}
+#your_choice
+{
+    width: 250px;
+    height: 250px;
+    background-color:rgb(131, 10, 16);
+    margin-top: 10px;
+}
+#choices
+{
+    width: 250px;
+    height: 80px;
+    margin-top: 10px;
+    background-color: rgb(9, 15, 69);
+    margin: 0 auto;
+
+}
+#choices img
+{
+    width: 80px;
+    height: 80px;
+}
