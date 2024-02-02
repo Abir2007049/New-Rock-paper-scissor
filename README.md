@@ -1,2 +1,6 @@
-Hello. I have tried to make a stone paper scissor game using javascript,html and css. 
-The rule is so simple.Just pick any of the symbols.The opponent will be computer.
+# Rock-Paper-Scissor
+A simple rock-paper-scissor game built with HTML, CSS and JavaScript. 
+## How to play
+- clone the repository using `git clone https://github.com/Abir2007049/Rock-paper-scissor.git`
+- open `game.html` using any browser
+- select your moves and play the game against computer
